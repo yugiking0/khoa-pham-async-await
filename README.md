@@ -2,6 +2,8 @@
 
 ---
 
+Your site is published at https://yugiking0.github.io/khoa-pham-async-await/
+
 <!-- ![Sync](./image/001.png 'Đồng bộ') -->
 
 ## 1. Các loại Functions : Xem mục [Các loại Function](./asset/01/functions.md)
