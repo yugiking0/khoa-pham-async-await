@@ -303,4 +303,10 @@ square(4, 5, 6)
 
 - Tham khảo câu lệnh ở [Tái sử dụng Promise](./pr2.js)
 
+## 3.Tóm tắt
+
+- Promise liên tục sẽ giúp cho việc gọi tái sử dụng nhiều Promise nhiều lần theo thứ tự.
+- Promise liên tục vẫn đảm bảo việc handle được trạng thái kết quả trả về vì là một đối tượng handle(.then() và .catch())
+- Promise liên tục giúp tránh callback hell và làm cho câu lệnh xử lý rõ ràng, ngắn gọn và dễ handle kiểm soát khi xảy ra lỗi hoặc cần viết lại hơn.
+
 ---
