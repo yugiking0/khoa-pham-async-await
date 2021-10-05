@@ -7,16 +7,15 @@ const fs = require('fs');
 //   return console.log(data);
 // });
 
+const fs = require('fs');
 let promiseRead = (path) => {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      fs.readFile(path, { encoding: 'utf-8' }, (err, data) => {
-        if (err) {
-          return reject(new Error('Kiểm tra lại đường dẫn!') + '');
-        }
-        return resolve(data);
-      });
-    }, 1000);
+    fs.readFile(path, { encoding: 'utf-8' }, (err, data) => {
+      if (err) {
+        return reject(new Error('Kiểm tra lại đường dẫn!') + '');
+      }
+      return resolve(data);
+    });
   });
 };
 promiseRead('../docs/test1.txt').then(

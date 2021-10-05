@@ -78,6 +78,28 @@ let prRead = (path) => {
 
 prRead('../docs/test1.txt').then(
   (res) => console.log(res),
+  (err) => console.log(err)const fs = require('fs');
+let promiseRead = (path) => {
+  return new Promise((resolve, reject) => {
+    fs.readFile(path, { encoding: 'utf-8' }, (err, data) => {
+      if (err) {
+        return reject(new Error('Kiểm tra lại đường dẫn!') + '');
+      }
+      return resolve(data);
+    });
+  });
+};
+promiseRead('../docs/test1.txt').then(
+  (res) => console.log(res),
   (err) => console.log(err)
 );
+);
 ```
+
+Vì fs.readFile đã là một câu lệnh bất đồng bộ rồi nên không cần sử dụng setTimeout, ta bỏ đi thành:
+
+```js
+
+```
+
+---

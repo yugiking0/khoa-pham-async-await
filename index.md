@@ -42,6 +42,9 @@
 
 ## 9. Tái sử dụng Promise
 
+- Là việc viết lại câu lệnh function có sử dụng promise và truyền vào các tham số để thuận tiện sử dụng.
 - Xem [Tái sử dụng Promise](./asset/09/index.md)
 
 ## 10. Promise liên tục
+
+- Xem [Promise liên tục](./asset/10/index.md)
