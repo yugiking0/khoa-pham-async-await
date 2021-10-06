@@ -318,6 +318,35 @@ setTimeout(() => {
 
 - Ta đã thấy được thứ tự câu lệnh .then liên tiếp trong một Promise và sự thừa hưởng giá trị return trả về có thể được sử dụng tiếp bằng tham số truyền vào câu lệnh .then kế tiếp, dù cho .then đầu tiên có resolve hay reject thì return handle sẽ được sử dụng làm tham số của câu lệnh .then thứ 2.
 
+- Ta điều chỉnh lại ở .then 2 ta trả return về giá trị để gán cho a thì kết quả hiển thị log lần 2 sẽ là:
+
+```js
+// Log lần 1
+let a = add(4, '5')
+  .then(
+    (result) => {
+      console.log('.then thứ nhất: ' + result);
+      return 'Kết quả: ' + result;
+    },
+    (err) => {
+      console.log(err + '');
+      return 'Bị lỗi.';
+    }
+  )
+  .then((b) => 'Then thứ 2 - ' + b);
+
+console.log(a);
+
+// Log lần 2 sau 2500ms
+setTimeout(() => {
+  console.log(a);
+}, 2500);
+```
+
+![Xử lý 4.4](./images/xuly04-4.png 'Xử lý 4.4')
+
+- Lúc này ta thấy a đã được gán giá trị do câu lệnh .then thứ 2 được return trả về.
+
 ## 4. Tóm tắt
 
 - Khi xử lý Promise ở client sẽ có 2 trường hợp trả về:
