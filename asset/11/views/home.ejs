@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lập trình Nodejs: Xử lý bất đồng bộ trong Javascript</title>
+    <style>
+      body {
+        height: 100vh;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+      }
+      h1 {
+        text-align: center;
+        color: white;
+      }
+    </style>
+    <script type="text/javascript">
+      let add = (a, b) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (typeof a != 'number' || typeof b != 'number') {
+              return reject(
+                new Error('Tham số truyền vào phải là kiểu number!')
+              );
+            }
+            resolve(a + b);
+          }, 2000);
+        });
+      };
+      // Log lần 1
+      let a = add(4, '5')
+        .then(
+          (result) => {
+            console.log('.then thứ nhất: ' + result);
+            return 'Kết quả: ' + result;
+          },
+          (err) => {
+            console.log(err + '');
+            return 'Bị lỗi.';
+          }
+        )
+        .then((b) => console.log('Thành công rồi!' + b));
+
+      console.log(a);
+
+      // Log lần 2 sau 2500ms
+      setTimeout(() => {
+        console.log(a);
+      }, 2500);
+    </script>
+  </head>
+  <body>
+    <h1>Lập trình Nodejs: Xử lý bất đồng bộ trong Javascript</h1>
+    <h2>Promise status và Promise value</h2>
+  </body>
+</html>
