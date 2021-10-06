@@ -47,3 +47,12 @@ Your site is published at https://yugiking0.github.io/khoa-pham-async-await/
 - Xem [Tái sử dụng Promise](./asset/09/index.md)
 
 ## 10. Promise liên tục
+
+- Xem [Promise liên tục](./asset/10/index.md)
+
+## 11. Promise status và Promise value
+
+- Ở các bài trước ta sử dụng Promise trên máy chủ backend NodeJS.
+- Bài này sẽ hướng dẫn thao tác sử dụng Promise trên client cụ thể .html ở trình duyệt.
+<!-- ![Sync](./image/001.png 'Đồng bộ') -->
+- Xem [Promise status và Promise value](./asset/11/index.md)
