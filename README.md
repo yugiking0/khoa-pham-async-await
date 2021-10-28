@@ -21,6 +21,8 @@ Your site is published at https://yugiking0.github.io/khoa-pham-async-await/
 ## 3. Bất đồng bộ là gì?
 
 - Xem mục [Bất đồng bộ](./asset/03/sync-async.md)
+- Xem mục [Xử Lý Bất Đồng Bộ Trong Javascript - Phần 1](./asset/03/phan1.md)
+- Xem mục [Xử Lý Bất Đồng Bộ Trong Javascript - Phần 2](./asset/03/phan2.md)
 
 ## 4. Tìm hiểu bất đồng bộ từ setTimeout()
 
