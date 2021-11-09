@@ -40,7 +40,7 @@ Kết hợp với cú pháp arrow function của ES6
 getUser = async () => { ... }
 ```
 
-Giá trị trả về của `AsyncFunction` sẽ luôn là một `Promise` mặc cho bạn có gọi await hay không, nếu trong code không trả về Promise nào thì sẽ có một promise mới được resolve với giá trị lúc đầu (nếu không có giá trị nào trong return kết quả trả về sẽ là _undefine_). Promise này sẽ ở trạng thái thành công với kết quả được trả về qua từ khóa return của hàm async, hoặc ở trạng thái thất bại với kết quả được đẩy qua từ khóa throw trong hàm async.
+Giá trị trả về của `AsyncFunction` sẽ luôn là một `Promise` mặc cho bạn có gọi `await` hay không, nếu trong code không trả về `Promise` nào thì sẽ có một `promise` mới được `resolve` với giá trị lúc đầu (nếu không có giá trị nào trong `return` kết quả trả về sẽ là _undefine_). Promise này sẽ ở trạng thái thành công với kết quả được trả về qua từ khóa return của hàm `async`, hoặc ở trạng thái thất bại với kết quả được đẩy qua từ khóa `throw` trong hàm `async`.
 
 #### 3.1.2 Await
 

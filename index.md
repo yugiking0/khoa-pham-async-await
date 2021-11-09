@@ -55,3 +55,15 @@
 - Bài này sẽ hướng dẫn thao tác sử dụng Promise trên client cụ thể .html ở trình duyệt.
 <!-- ![Sync](./image/001.png 'Đồng bộ') -->
 - Xem [Promise status và Promise value](./asset/11/index.md)
+
+## 12. Phương thức resolve và reject
+
+- Nghiên cứu thêm về phương thức resolve và reject của Promise khi thực hiện ở:
+- Server: NODE
+- Client phản hồi.
+- Xem [Phương thức resolve và reject](./asset/12/index.md)
+
+## 13. Phương thức all và race
+
+- Các phương thức xử lý trong Promise
+- Xem [Phương thức all và race](./asset/13/index.md)

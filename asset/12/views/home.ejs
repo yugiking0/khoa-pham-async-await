@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lập trình Nodejs: Xử lý bất đồng bộ trong Javascript</title>
+    <style>
+      body {
+        height: 100vh;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+      }
+      h1 {
+        text-align: center;
+        color: white;
+      }
+    </style>
+    <script type="text/javascript">
+      let add = (a, b) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (typeof a != 'number' || typeof b != 'number') {
+              return reject(
+                new Error('Tham số truyền vào phải là kiểu number!')
+              );
+            }
+            resolve(a + b);
+          }, 2000);
+        });
+      };
+
+      let rPromise = Promise.reject(add(4, '5'));
+      rPromise
+        .catch((err) => console.log(err))
+        .then(
+          (res) => res,
+          (err) => console.log(err)
+        );
+      console.log(rPromise);
+    </script>
+  </head>
+  <body>
+    <h1>Lập trình Nodejs: Xử lý bất đồng bộ trong Javascript</h1>
+    <h2>Phương thức resolve và reject</h2>
+  </body>
+</html>
