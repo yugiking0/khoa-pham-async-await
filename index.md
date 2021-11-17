@@ -65,5 +65,22 @@
 
 ## 13. Phương thức all và race
 
-- Các phương thức xử lý trong Promise
+- Các phương thức xử lý trong Promise.all và Promise.race
 - Xem [Phương thức all và race](./asset/13/index.md)
+- Xem [Promise.all](./asset/13/pr-all.md)
+
+## 14. node co
+
+- Hướng dẫn dùng `co module` để viết `async code` gọn gàng hơn
+- Xem [node co](./asset/14/index.md)
+
+## 15. Async/Await
+
+- Sử dụng phương thức Async/Await
+- Hướng dẫn sử dụng async await để thay thế co
+- Xem [Async Await](./asset/15/index.md)
+- Ví dụ [Load Async Await](./asset/15/vidu.md)
+
+## 16. Sử dụng Babel CLI
+
+- Vì NodeJS vẫn chưa hỗ trợ toàn diện cho Async/Await nên sẽ dùng gói Package của NodeJS là `Babel CLI` (Babel Command Line Interface)
