@@ -54,7 +54,7 @@ console.log(aPromise);
 // Promise { <pending> }
 ```
 
-- Kết quả trả về là trạng thái `Pending`, vì là trạng thái `Pending` nên ta có thể xử lý trạng thái trả về `.then` hoặc `.catch`
+- Kết quả trả về là trạng thái `Pending`, vì là trạng thái `Pending` nên ta có thể xử lý trạng thái trả về `.then` hoặc `.catch` để handle xử lý.
 
 ```js
 let add = (a, b) => {
@@ -78,7 +78,7 @@ aPromise.then((res) => console.log(res));
 #### Tóm tắt
 
 - Như vậy đối với phương thức Resolve thì:
-  - Có thể truyền vào một giá trị, và sẽ trả về giá trị tương tự xử .then của promise
+  - Có thể truyền vào một giá trị, và sẽ trả về giá trị tương tự xử lý .then của Promise
   - Truyền vào một Promise, thì sẽ trả về một Promise ở trạng thái pending, và có thể xử lý tiếp bằng phương thức .then hoặc .catch tiếp tục như một Promise.
 
 ---
@@ -135,7 +135,7 @@ console.log(rPromise);
 // Bị lỗi
 ```
 
-- Như vậy, một Promise ở trạng thái rejected thì cần phải handle lỗi của nó.
+- Như vậy, một Promise ở trạng thái rejected thì cần phải handle lỗi của nó bằng `.then(res,error)` hoặc `.catch(error)`
 
 ---
 
@@ -276,8 +276,6 @@ console.log(rPromise);
 
 ![Reject](./images/005.png 'Reject')
 
-### 2. Promise Reject
-
 ### 2.2 Promise Reject một Promise
 
 - Ta thử truyền vào Reject một Promise để kiểm tra sự kiện
@@ -299,3 +297,5 @@ console.log(rPromise);
 - Khi thay đổi vị trí bắt lỗi vẫn chưa bắt lỗi được trạng thái pending của Promise được truyền vào.
   ![Reject](./images/007.png 'Reject')
 - Để hiểu rõ hơn cách xử lý, ta xem ở bài tiếp theo về `Phương thức all và race` để có thể kiểm soát handle nhiều Promise cùng lúc xử lý bất đồng bộ.
+
+---
