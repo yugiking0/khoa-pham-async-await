@@ -54,7 +54,7 @@ Các thông tin trong file này ban đầu chính là những thông tin bạn n
 
 Dựa theo chức năng mà ta chia _package_ ra làm 2 loại, đó là:
 
-- **Simple dependencies** (Để cho ngắn gọn thì về sau mình sẽ chỉ gọi nó là Dependecies thôi)
+- **Simple dependencies** (Để cho ngắn gọn thì về sau mình sẽ chỉ gọi nó là **Dependencies** thôi)
 - **Development dependencies**.
 
 _Về sự khác nhau giữa 2 loại này ra sao???_
