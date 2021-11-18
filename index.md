@@ -8,9 +8,9 @@
 
 ![Các loại Functions](./asset/01/image/001.png 'Các loại Functions')
 
-- Declare Function : Xem mục [Declare Function](./asset/01/declare.md)
-- Expressions Function : Xem mục [Expressions Function](./asset/01/expressions.md)
-- Arrow Function : Xem mục [Arrow Function](./asset/01/arrow.md)
+- Declare Function : Xem mục [Declare Function](./asset/01/declare.md) - Định nghĩa hàm
+- Expressions Function : Xem mục [Expressions Function](./asset/01/expressions.md) - Biểu thức hàm
+- Arrow Function : Xem mục [Arrow Function](./asset/01/arrow.md) - Hàm mũi tên
 
 ## 2. Arrow Function
 
@@ -63,24 +63,32 @@
 - Client phản hồi.
 - Xem [Phương thức resolve và reject](./asset/12/index.md)
 
-## 13. Phương thức all và race
+## 13. Phương thức Promise.all và Promise.race
 
-- Các phương thức xử lý trong Promise.all và Promise.race
+- Phương thức xử lý Promise.all và Promise.race
 - Xem [Phương thức all và race](./asset/13/index.md)
 - Xem [Promise.all](./asset/13/pr-all.md)
 
 ## 14. node co
 
-- Hướng dẫn dùng `co module` để viết `async code` gọn gàng hơn
+- Hướng dẫn dùng `co module` để viết `Promise code` gọn gàng hơn
 - Xem [node co](./asset/14/index.md)
 
-## 15. Async/Await
+## 15. Async Await
 
-- Sử dụng phương thức Async/Await
-- Hướng dẫn sử dụng async await để thay thế co
+- Phương thức `Async Await`
+- Hướng dẫn sử dụng `Async Await` để thay thế `co module`
 - Xem [Async Await](./asset/15/index.md)
 - Ví dụ [Load Async Await](./asset/15/vidu.md)
 
-## 16. Sử dụng Babel CLI
+## 16. Cùng tìm hiểu về Npm và package
+
+<!-- ![Sync](./image/001.png 'Đồng bộ') -->
+
+- Tìm hiểu về cách khai báo khởi tạo dự án `NodeJS` và cách cài đặt các gói `Node Package`
+- Xem [Npm và package](./asset/16/index.md)
+
+## 17. Sử dụng Babel CLI
 
 - Vì NodeJS vẫn chưa hỗ trợ toàn diện cho Async/Await nên sẽ dùng gói Package của NodeJS là `Babel CLI` (Babel Command Line Interface)
+- Xem [Cài đặt gói Babel CLI](./asset/17/index.md)

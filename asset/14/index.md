@@ -99,8 +99,8 @@ let readEach = (arr) => {
 - Có thể xử lý như sau:
 
   - B1: cần cài đặt thư viện Node co ở bên ngoài
-    > npm install co
-  - B2: Cấu trúc của Node co như sau:
+    > **npm install co**
+  - B2: Cấu trúc của Node `co Module` như sau:
 
     ```js
     const co = require('co');
@@ -116,8 +116,8 @@ let readEach = (arr) => {
     ```
 
     - Trong đó:
-      - `co(function*())` : Phải có dấu \* ở đây được gọi là `Generator Function`.
-      - keyword `yield` : Từ khóa `yield` có khả năng gọi `Promise`.
+      - `co(function*())` : Phải có dấu \* ở đây được gọi là **`Generator Function`**.
+      - keyword `yield` : Từ khóa `yield` có khả năng gọi **`Promise`**.
 
   - B3: Ta viết lại như sau:
 
@@ -141,7 +141,7 @@ co(function* () {
   .catch((err) => console.log(err + ''));
 ```
 
-- Hoặc ta viết liên tục xử lý nhiều Promise trong khối Block lệnh Co như sau:
+- Hoặc ta viết liên tục xử lý nhiều Promise trong khối Block lệnh `Co` như sau:
 
 ```js
 co(function* () {
