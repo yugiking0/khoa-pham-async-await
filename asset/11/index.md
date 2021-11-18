@@ -14,8 +14,10 @@
 
 ## 2. Chuẩn bị
 
-- Bước 1: Server NodeJS, ta viết bổ sung 1 file server.js để hoạt động.
-- Bước 2: Trang home.ejs đơn giản mô phỏng Promise để nghiên cứu cách hoạt động, ở đây ta sẽ sử dụng luôn function add phép cộng đối tượng Promise mô phỏng bất đồng bộ ở bài trước để sử dụng.
+- Bước 1: Server NodeJS, ta có file `server.js`.
+- Bước 2: Trang `home.ejs` đơn giản (trong thư mục **`views`**) mô phỏng Promise để nghiên cứu cách hoạt động, ở đây ta sẽ sử dụng luôn function add phép cộng đối tượng Promise mô phỏng bất đồng bộ ở bài trước để sử dụng.
+
+![Cấu trúc](./images/server.png 'Cấu trúc')
 
 ![Chuẩn bị](./images/001.png 'Chuẩn bị')
 
@@ -52,7 +54,21 @@ app.get('/', (req, res) => {
         color: white;
       }
     </style>
-    <script src="./script.js"></script>
+    <script type="text/javascript">
+      let add = (a, b) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (typeof a != 'number' || typeof b != 'number') {
+              return reject(
+                new Error('Tham số truyền vào phải là kiểu number!')
+              );
+            }
+            resolve(a + b);
+          }, 2000);
+        });
+      };
+    </script>
+    <!-- <script src="./script.js"></script> -->
   </head>
   <body>
     <h1>Lập trình Nodejs: Xử lý bất đồng bộ trong Javascript</h1>
@@ -62,7 +78,15 @@ app.get('/', (req, res) => {
 ```
 
 - Xem [home.ejs](./views/home.ejs)
-- Xem [script.js](./views/script.js) **_(`Không tách được file script.js ra được`)_**, phải để chung script trong file home.ejs, ta sẽ thao tác trên script để tìm hiểu về cách hoạt động promise trên client.
+- Xem [script.js](./views/script.js) **_(`Không tách được file script.js ra được`)_**, phải để chung script trong file `home.ejs`, ta sẽ thao tác trên
+
+```html
+<script type="text/javascript">
+  ...
+</script>
+```
+
+để tìm hiểu về cách hoạt động promise trên client.
 
 ```js
 let add = (a, b) => {
@@ -82,11 +106,11 @@ add(4, 5).then(
 );
 ```
 
-- Bước 3: Ta chạy Terminal file server.js lên.
+- Bước 3: Ta chạy Terminal file `server.js` lên.
 
 ![Terminal run server.js](./images/002.png 'Terminal run server.js')
 
-- Bước 4: Xem trang web client tại địa chỉ là localhost:3000
+- Bước 4: Xem trang web client tại địa chỉ là `localhost:3000`
 
 ![Trình duyệt](./images/003.png 'Trình duyệt')
 
