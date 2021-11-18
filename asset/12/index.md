@@ -119,12 +119,14 @@ let add = (a, b) => {
   });
 };
 
+// handle bằng .catch khi error
 let rPromise = Promise.reject('Bị lỗi');
 rPromise.catch((er) => console.log(er + ''));
 console.log(rPromise);
 // Promise { <rejected> 'Bị lỗi' }
 // Bị lỗi
 
+// handle bằng .then khi error
 let rPromise = Promise.reject('Bị lỗi');
 rPromise.then(
   (res) => console.log(res),
