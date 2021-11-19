@@ -39,4 +39,4 @@ console.log('Kết thúc.');
 - Đa số câu lệnh bất đồng bộ sẽ có `Callback` để trả về kết quả hoặc thông báo lỗi nếu có lỗi xảy ra.
 - Việc quyết định khi nào sử dụng lệnh Bất đồng bộ hay Đồng bộ được quyết định bởi người viết chương trình có dụng ý từ việc thiết kế hay phân tích.
 - Để chắc chắn hiểu được cấu trúc và cách thực thi cần đọc tài liệu mô tả hướng dẫn sử dụng.
-- Đối với NodeJS có thể tham khảo ở đường link sau: [Arrow Function](./asset/01/arrow.md)
+- Đối với NodeJS có thể tham khảo ở đường link sau:[Bất đồng bộ](../03/sync-async.md)
