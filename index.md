@@ -83,8 +83,6 @@
 
 ## 16. Cùng tìm hiểu về Npm và package
 
-<!-- ![Sync](./image/001.png 'Đồng bộ') -->
-
 - Tìm hiểu về cách khai báo khởi tạo dự án `NodeJS` và cách cài đặt các gói `Node Package`
 - Xem [Npm và package](./asset/16/index.md)
 
@@ -99,7 +97,8 @@
 
 ## 19. Async – Await trong NodeJS 7.6
 
-- Xem [Sử dụng Async – Await liên tiếp](./asset/19/index.md)
+- Xem [Async – Await trong NodeJS 7.6](./asset/19/index.md)
+<!-- ![Sync](./image/001.png 'Đồng bộ') -->
 
 ## 20. Sử dụng Async – Await liên tiếp
 
