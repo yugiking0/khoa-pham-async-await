@@ -34,8 +34,6 @@
 
 ## 7. Callback hell
 
-s
-
 - Xem [Callback hell](./asset/07/index.md)
 
 ## 8. Promise Basic
