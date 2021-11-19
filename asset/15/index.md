@@ -2,6 +2,13 @@
 
 ---
 
+- [1. Nhắc lại cách dùng Node CO](#1-nhắc-lại-cách-dùng-node-co)
+- [2. Sử dụng Async Await](#2-sử-dụng-async-await)
+- [3. Tìm hiểu Async Await](#3-tìm-hiểu-async-await)
+- [4. bài tập](#4-bài-tập)
+
+---
+
 ## 1. Nhắc lại cách dùng Node CO
 
 - Ta sử dụng thư viện `Node co` để thực hiện một nhóm các câu lệnh `Promise`

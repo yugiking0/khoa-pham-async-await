@@ -2,6 +2,11 @@
 
 ---
 
+- [1. Promise](#1-promise)
+- [2. Handle trạng thái](#2-handle-trạng-thái)
+- [3. Mô phỏng xử lý bất đồng bộ](#3-mô-phỏng-xử-lý-bất-đồng-bộ)
+- [4. Tóm tắt](#4-tóm-tắt)
+
 ## 1. Promise
 
 - Ta xem câu lệnh tạo 1 promise đơn giản như sau:

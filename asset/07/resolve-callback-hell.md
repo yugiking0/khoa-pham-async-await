@@ -1,5 +1,17 @@
 # 6 cách “trị” Callback hell trong javascript
 
+- [I. Callback Hell](#i-callback-hell)
+- [1. Callback Hell là gì ?](#1-callback-hell-là-gì)
+- [2. Callback Hell trong javascript là gì?](#2-callback-hell-trong-javascript-là-gì)
+- [II. Các cách xử lý callback hell trong javascript dễ nhất](#ii-các-cách-xử-lý-callback-hell-trong-javascript-dễ-nhất)
+  - [1. Thiết kế ứng dụng theo dạng module](#1-thiết-kế-ứng-dụng-theo-dạng-module)
+  - [2. Nên đặt tên cho callback trong javascript](#2-nên-đặt-tên-cho-callback-trong-javascript)
+  - [3. Định nghĩa hàm trước khi gọi để tránh callback hell trong javascript](#3-định-nghĩa-hàm-trước-khi-gọi-để-tránh-callback-hell-trong-javascript)
+  - [4. Sử dụng module Async.js](#4-sử-dụng-module-asyncjs)
+  - [5. Sử dụng Promises](#5-sử-dụng-promises)
+  - [6. Async/Await nhằm giảm khả năng xảy ra callback hell trong javascript](#6-asyncawait-nhằm-giảm-khả-năng-xảy-ra-callback-hell-trong-javascript)
+- [III. Tạm kết](#iii-tạm-kết)
+
 ## I. Callback Hell
 
 ## 1. Callback Hell là gì ?

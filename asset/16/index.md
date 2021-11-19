@@ -4,6 +4,16 @@
 
 ![npm](./image/001.png 'npm')
 
+- [1. Giới thiệu chung](#1-giới-thiệu-chung)
+- [2. Cài đặt và sử dụng Npm](#2-cài-đặt-và-sử-dụng-npm)
+- [3. Phân loại loại package](#3-phân-loại-loại-package)
+
+  - [3.1 Simple dependencies](#31-simple-dependencies)
+  - [3.2 Development dependencies](#32-development-dependencies)
+  - [3.3 Cài đặt](#33-cài-đặt)
+
+- [4. Các loại Node Module Chuẩn](#4-các-loại-node-module-chuẩn)
+
 ## 1. Giới thiệu chung
 
 **NPM** viết tắt của **_Node Package Manager_** là một công cụ tạo và quản lý các thư viện lập trình **Javascript** cho **NodeJS**. Trong cộng đồng **Javascript**, các lập trình viên chia sẻ hàng trăm nghìn các thư viện với các đoạn code đã thực hiện sẵn một chức năng nào đó. Nó giúp cho các dự án mới tránh phải viết lại các thành phần cơ bản, các thư viện lập trình hay thậm chí cả các **framework**.

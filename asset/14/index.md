@@ -2,6 +2,14 @@
 
 ---
 
+- [1. Xử lý đọc 3 file theo thứ tự bất đồng bộ bằng Promise](#1-xử-lý-đọc-3-file-theo-thứ-tự-bất-đồng-bộ-bằng-promise)
+- [2. Sử dụng Node Co xử lý nhiều Promise theo thứ tự đồng bộ](#2-sử-dụng-node-co-xử-lý-nhiều-promise-theo-thứ-tự-đồng-bộ)
+- [3. Sử dụng Node Co như một hàm truyền tham số vào.](#3-sử-dụng-node-co-như-một-hàm-truyền-tham-số-vào)
+- [4. Tổng kết](#4-tổng-kết)
+- [5. Bài tập](#5-bài-tập)
+
+---
+
 ## 1. Xử lý đọc 3 file theo thứ tự bất đồng bộ bằng Promise
 
 - Ở bài trước ta đã học đọc 3 file bằng Promise + fs.readFile liên tục như sau:

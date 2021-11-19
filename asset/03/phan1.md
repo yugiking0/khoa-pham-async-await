@@ -6,6 +6,10 @@ Chắc chắn khi lập trình, bạn sẽ có các công việc cần thời gi
 
 Trong phần đầu tiên này, chúng ta sẽ cùng tìm hiểu và khái niệm cũng như một số phương án xử lý hay dùng.
 
+- [1. Đồng bộ (Synchronous)](#1-quá-trình-đồng-bộ-synchronous)
+- [2. Bất đồng bộ (Asynchronous)](#2-quá-trình-bất-đồng-bộ-asynchronous)
+- [3. Các cách xử lý bất đồng bộ phổ biến](#3-các-cách-xử-lý-bất-đồng-bộ-phổ-biến)
+
 ## 1. Quá trình đồng bộ (Synchronous)
 
 Đây là một quá trình đã rất quen thuộc với chúng ta. Về cơ bản thì quá trình này gồm các câu lệnh được thực hiện theo thứ tự lần lần lượt, câu lệnh thứ nhất phải hoàn thành thì mới có thể thực hiện câu lệnh thứ 2, …

@@ -2,6 +2,11 @@
 
 ---
 
+- [1. Mô tả](#1-mô-tả)
+- [2. Chuẩn bị](#2-chuẩn-bị)
+- [3. Tìm hiểu cách hoạt động](#3-tìm-hiểu-cách-hoạt-động)
+- [4. Tóm tắt](#4-tóm-tắt)
+
 ## 1. Mô tả
 
 - Ở các bài trước ta đã nghiên cứu cách tạo một đối tượng Promise mô phỏng bất đồng bộ, và việc tái sử dụng Đối tượng Promise liên tục trên NodeJS thực thi tại Server.

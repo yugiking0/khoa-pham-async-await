@@ -2,6 +2,11 @@
 
 ---
 
+- [1. Nhắc lại tái sử dụng Promise](#1-nhắc-lại-tái-sử-dụng-promise)
+- [2. Sử dụng Promise liên tiếp nhau để xử lý Callback Hell](#2-sử-dụng-promise-liên-tiếp-nhau-để-xử-lý-callback-hell)
+- [3. Áp dụng Promise liên tiếp nhau để xử lý tính diện tích hình thang](#3-áp-dụng-promise-liên-tiếp-nhau-để-xử-lý-tính-diện-tích-hình-thang)
+- [4.Tóm tắt](#4tóm-tắt)
+
 ## 1. Nhắc lại tái sử dụng Promise
 
 - Là việc gói Promise vào một trong function
@@ -303,7 +308,7 @@ square(4, 5, 6)
 
 - Tham khảo câu lệnh ở [Tái sử dụng Promise](./pr2.js)
 
-## 3.Tóm tắt
+## 4.Tóm tắt
 
 - Promise liên tục sẽ giúp cho việc gọi tái sử dụng nhiều Promise nhiều lần theo thứ tự.
 - Promise liên tục vẫn đảm bảo việc handle được trạng thái kết quả trả về vì là một đối tượng handle(.then() và .catch())

@@ -2,6 +2,22 @@
 
 ---
 
+- [I. Thực hiện ở Server](#i-thực-hiện-ở-server)
+  - [1. Promise Resolve](#1-promise-resolve)
+    - [1.1 Gọi trực tiếp Promise Resolve](#11-gọi-trực-tiếp-promise-resolve)
+    - [1.2 Gọi Promise Resolve trả về 1 Promise](#12-gọi-promise-resolve-trả-về-1-promise)
+    - [1.3 Tóm tắt](#13-tóm-tắt)
+  - [2. Promise Reject](#2-promise-reject)
+- [II. Thực hiện ở Client](#ii-thực-hiện-ở-client)
+  - [1. Promise Resolve](#1-promise-resolve-1)
+    - [1.1 Gọi trực tiếp Promise Resolve truyền vào giá trị](#11-gọi-trực-tiếp-promise-resolve-truyền-vào-giá-trị)
+    - [1.2 Truyền vào Promise Resolve là Promise](#12-truyền-vào-promise-resolve-là-promise)
+  - [2. Promise Reject](#2-promise-reject-1)
+    - [2.1 Promise Reject một giá trị truyền vào](#21-promise-reject-một-giá-trị-truyền-vào)
+    - [2.2 Promise Reject một Promise](#22-promise-reject-một-promise)
+
+---
+
 ## I. Thực hiện ở Server
 
 ### 1. Promise Resolve
@@ -75,7 +91,7 @@ aPromise.then((res) => console.log(res));
 // 9 : Trả về hiển thị kết quả của add(4,5)
 ```
 
-#### Tóm tắt
+#### 1.3 Tóm tắt
 
 - Như vậy đối với phương thức Resolve thì:
   - Có thể truyền vào một giá trị, và sẽ trả về giá trị tương tự xử lý .then của Promise
@@ -278,7 +294,7 @@ console.log(rPromise);
 
 ![Reject](./images/005.png 'Reject')
 
-### 2.2 Promise Reject một Promise
+#### 2.2 Promise Reject một Promise
 
 - Ta thử truyền vào Reject một Promise để kiểm tra sự kiện
 

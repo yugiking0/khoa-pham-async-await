@@ -95,3 +95,7 @@ Your site is published at https://yugiking0.github.io/khoa-pham-async-await/
 
 - Vì NodeJS vẫn chưa hỗ trợ toàn diện cho Async/Await nên sẽ dùng gói Package của NodeJS là `Babel CLI` (Babel Command Line Interface)
 - Xem [Cài đặt gói Babel CLI](./asset/17/index.md)
+
+## 18. Làm quen với async – await
+
+- Xem [Làm quen với Async – Await](./asset/18/index.md)

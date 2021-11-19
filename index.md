@@ -92,3 +92,15 @@
 
 - Vì NodeJS vẫn chưa hỗ trợ toàn diện cho Async/Await nên sẽ dùng gói Package của NodeJS là `Babel CLI` (Babel Command Line Interface)
 - Xem [Cài đặt gói Babel CLI](./asset/17/index.md)
+
+## 18. Làm quen với Async – Await
+
+- Xem [Làm quen với Async – Await](./asset/18/index.md)
+
+## 19. Async – Await trong NodeJS 7.6
+
+- Xem [Sử dụng Async – Await liên tiếp](./asset/19/index.md)
+
+## 20. Sử dụng Async – Await liên tiếp
+
+- Xem [Sử dụng Async – Await liên tiếp](./asset/19/index.md)

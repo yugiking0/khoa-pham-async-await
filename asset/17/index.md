@@ -105,4 +105,7 @@ Khi này chạy trên Terminal sẽ gọi lệnh chạy
 
 Lúc này **môi trường đã sẵn sàng** để chạy các câu lệnh `Async Await` biên dịch trên Javascript phiên bản cũ hơn.
 
+- Tham khảo thêm [Babel CLI](https://babeljs.io/)
+- hoặc [Babel CLI](https://www.tutorialspoint.com/babeljs/index.htm)
+
 ---

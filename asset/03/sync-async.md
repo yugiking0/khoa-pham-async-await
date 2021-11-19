@@ -2,6 +2,9 @@
 
 ---
 
+- [1. Đồng bộ](#1-đồng-bộ)
+- [2. Bất đồng bộ](#2-bất-đồng-bộ)
+
 # 1. Đồng bộ
 
 - Đồng bộ là việc thực thi các câu lệnh theo thứ tự từ trên xuống, câu lệnh phía trước thực thi xong thì mới thực thi câu lệnh kết tiếp.
