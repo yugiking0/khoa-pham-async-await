@@ -2,7 +2,7 @@
 
 ---
 
-`Javascript Async await` được giới thiệu từ phiên bản **NodeJS 7.6** và hiện tại thì nó được hỗ trợ trên tất cả các trình duyệt hiện đại.
+`Javascript Async await` được giới thiệu từ phiên bản **NodeJS 7.6** và hiện tại thì nó được hỗ trợ trên tất cả các trình duyệt hiện đại mà không cần các tùy chọn thử nghiệm khi chạy ứng dụng Nodejs như: _`Babel-CLI`_...
 
 Mình làm việc với `Javascript` cũng được một thời gian. Từ ngày mình cảm thây vui vẻ với `callback`, rồi sung sướng tột độ với `Promise`, cuối cùng thì vỡ òa với `Async/await` 🙂
 
