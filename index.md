@@ -6,7 +6,7 @@
 
 ## 1. Các loại Functions : Xem mục [Các loại Function](./asset/01/functions.md)
 
-![Các loại Functions](./asset/01/image/001.png 'Các loại Functions')
+![Các loại Functions](./asset/01/image/001.png "Các loại Functions")
 
 - Declare Function : Xem mục [Declare Function](./asset/01/declare.md) - Định nghĩa hàm
 - Expressions Function : Xem mục [Expressions Function](./asset/01/expressions.md) - Biểu thức hàm
@@ -27,6 +27,7 @@
 ## 5. ReadFile và ReadFileSync trong NodeJS
 
 - Xem mục [ReadFile và ReadFileSync](./asset/05/readfilesync.md)
+- Xem mục [Promise](./asset/05/index.md)
 
 ## 6. Callback
 
@@ -100,6 +101,14 @@
 - Xem [Async – Await trong NodeJS 7.6](./asset/19/index.md)
 <!-- ![Sync](./image/001.png 'Đồng bộ') -->
 
-## 20. Sử dụng Async – Await liên tiếp
+## 20. Tìm hiểu Async – Await bất đồng bộ
 
-- Xem [Sử dụng Async – Await liên tiếp](./asset/19/index.md)
+- Xem [Tìm hiểu Async – Await bất đồng bộ](./asset/20/index.md)
+
+## 21. Sử dụng Async – Await liên tiếp
+
+- Xem [Sử dụng Async – Await liên tiếp](./asset/21/index.md)
+
+## 22. Async function trả về promise
+
+- Xem [Async function trả về promise](./asset/22/index.md)

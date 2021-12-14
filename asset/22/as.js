@@ -1,12 +1,3 @@
-# Sử dụng Async – Await liên tiếp
-
----
-
-> Sử dụng Sync - Await để áp dụng tính bài toán Diện tích hình thang
-
-- Ta sẽ dùng câu lệnh Async/Await xử lý dừng lại từng dòng lệnh xử lý Bất đồng bộ.
-
-```js
 // Phep Cong
 var add = (a, b) => {
   return new Promise((resolve, reject) => {
@@ -51,40 +42,24 @@ var divide = (a, b) => {
   });
 };
 
-var dienTichHinhThang = async (a, b, c) => {
-  var ab = await add(a, b);
-  var ah = await multiply(ab, c);
-  var result = await divide(ah, 2);
-  return result;
-};
-
-dienTichHinhThang(2, 3, 4)
-  .then((res) => console.log('Dien tich hinh thang: ', res))
-  .catch((err) => console.log(err + ''));
-
-// Dien tich hinh thang: 10
-```
-
-- Hoặc viết lại
-
-```js
-var dienTichHinhThang = async (a, b, c, callBack) => {
+var tinhDienTich = async (a, b, c) => {
   try {
     var ab = await add(a, b);
     var ah = await multiply(ab, c);
     var result = await divide(ah, 2);
-    return callBack(undefined, result);
+    return Promise.resolve(result);
   } catch (err) {
-    return callBack(err);
+    return Promise.reject(err);
   }
 };
 
-dienTichHinhThang(2, 3, 4, (err, res) => {
-  if (err) {
-    return console.log(err + '');
+async function xuLy(a, b, c) {
+  var dt = await tinhDienTich(a, b, c)
+    .then((res) => res)
+    .catch((err) => console.log(err + ''));
+  if (dt !== undefined) {
+    console.log(dt);
   }
-  console.log('Dien tich hinh thang: ', res);
-});
-```
+}
 
----
+xuLy(4, 5, '6');
