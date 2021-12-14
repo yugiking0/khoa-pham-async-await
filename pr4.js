@@ -5,14 +5,14 @@
 
 // note: Cộng
 let add = (a, b) => {
-    return new Promise((resolve, reject) => {
-        return setTimeout(() => {
-            if ((typeof a != 'number') | (typeof b != 'number')) {
-                return reject(new Error('Tham số truyền vào phải là kiểu số!'));
-            }
-            return resolve(a + b);
-        });
+  return new Promise((resolve, reject) => {
+    return setTimeout(() => {
+      if ((typeof a != "number") | (typeof b != "number")) {
+        return reject(new Error("Tham số truyền vào phải là kiểu số!"));
+      }
+      return resolve(a + b);
     });
+  });
 };
 
 // add(4, `5`).then(
@@ -22,29 +22,29 @@ let add = (a, b) => {
 
 // note: Nhân
 let multiply = (a, h) => {
-    return new Promise((resolve, reject) => {
-        return setTimeout(() => {
-            if (typeof h != 'number') {
-                return reject(new Error('Tham số truyền vào phải là kiểu số!'));
-            }
-            return resolve(a * h);
-        });
+  return new Promise((resolve, reject) => {
+    return setTimeout(() => {
+      if (typeof h != "number") {
+        return reject(new Error("Tham số truyền vào phải là kiểu số!"));
+      }
+      return resolve(a * h);
     });
+  });
 };
 
 // note: Chia
 let divide = (a, c) => {
-    return new Promise((resolve, reject) => {
-        return setTimeout(() => {
-            if (typeof c != 'number') {
-                return reject(new Error('Tham số truyền vào phải là kiểu số!'));
-            } else if (typeof c === 0) {
-                return reject(new Error('Số chia phải khác 0!'));
-            } else {
-                return resolve(a / c);
-            }
-        });
+  return new Promise((resolve, reject) => {
+    return setTimeout(() => {
+      if (typeof c != "number") {
+        return reject(new Error("Tham số truyền vào phải là kiểu số!"));
+      } else if (typeof c === 0) {
+        return reject(new Error("Số chia phải khác 0!"));
+      } else {
+        return resolve(a / c);
+      }
     });
+  });
 };
 
 // add(2, 3)
@@ -62,9 +62,9 @@ let divide = (a, c) => {
 //   );
 
 let dienTichHinhThang = (a, b, c) => {
-    return add(a, b)
-        .then((res) => multiply(res, c))
-        .then((result) => divide(result, 2));
+  return add(a, b)
+    .then((res) => multiply(res, c))
+    .then((result) => divide(result, 2));
 };
 
 // dienTichHinhThang(3, 3, 4).then(
@@ -75,22 +75,28 @@ let dienTichHinhThang = (a, b, c) => {
 //-----------------------------------------------
 
 let dienTichHinhThang2 = (a, b, c) => {
-    return add(a, b)
-        .then(
-            (res) => multiply(res, c),
-            (err) => console.log('Lỗi 1: ' + err + '')
-        )
-        .then(
-            (result) => divide(result, 2),
-            (error) => console.log('Lỗi 2: ' + error + '')
-        )
-        .then(
-            (result) => console.log(result),
-            (err) => console.log('Lỗi 3: ' + err + '')
-        );
+  return add(a, b)
+    .then(
+      (res) => multiply(res, c),
+      (err) => console.log("Lỗi 1: " + err + "")
+    )
+    .then(
+      (result) => divide(result, 2),
+      (error) => console.log("Lỗi 2: " + error + "")
+    )
+    .then(
+      (result) => console.log(result),
+      (err) => console.log("Lỗi 3: " + err + "")
+    );
 };
 
-dienTichHinhThang2('3', 3, 4).then(
-    (mess) => console.log('Diện tích: ' + mess),
-    (err) => console.log('Lỗi 4: ' + err)
+dienTichHinhThang2("3", 3, 4).then(
+  (mess) => console.log("Diện tích: " + mess),
+  (err) => console.log("Lỗi 4: " + err)
 );
+
+var add2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve();
+  }, 1000);
+});

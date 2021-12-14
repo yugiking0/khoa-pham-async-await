@@ -22,12 +22,12 @@
 
 ## 4. Tìm hiểu bất đồng bộ từ setTimeout()
 
+- Xem mục [Promise](./asset/05/index.md)
 - Xem mục [setTimeOut](./asset/04/set-time-out.md)
 
 ## 5. ReadFile và ReadFileSync trong NodeJS
 
 - Xem mục [ReadFile và ReadFileSync](./asset/05/readfilesync.md)
-- Xem mục [Promise](./asset/05/index.md)
 
 ## 6. Callback
 
