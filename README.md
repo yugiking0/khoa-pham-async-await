@@ -4,7 +4,7 @@
 
 Your site is published at https://yugiking0.github.io/khoa-pham-async-await/
 
-Your site is published at https://yugiking0.github.io/khoa-pham-async-await/f8/
+Xem Promise(F8) at https://yugiking0.github.io/khoa-pham-async-await/f8.html
 
 <!-- ![Sync](./image/001.png 'Đồng bộ') -->
 
