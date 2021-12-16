@@ -84,6 +84,7 @@ newPromise
 ### 5.1 Trạng thái **Pending**
 - Khi không gọi xử lý Resolve() và Reject() sẽ bị `Memory Leak`
 - Và không có phương thức trả về sẽ ở trạng thái `Pending() `đang xử lý.
+
 ```js
 var newPromise = new Promise((resolve, reject) => {
   console.log("Xử lý Promise!");
@@ -102,6 +103,7 @@ setTimeout(() => {
 ### 5.2 Trạng thái **fulfilled**
 
 - Khi xử lý Resolve() , nhưng đối tượng không xử lý handle lỗi ở phương thức .then()
+
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
@@ -128,6 +130,7 @@ newPromise
 ![fulfilled](./images/002.png 'fulfilled')
 
 - Khi xử lý Resolve() , đối tượng xử lý handle lỗi ở phương thức .then()
+
 ```js
 var newPromise = new Promise((resolve, reject) => {
   console.log("Xử lý Promise!");
@@ -157,6 +160,7 @@ newPromise
 ### 5.3 Trạng thái **Reject**
 #### 5.3.1 Báo lỗi Uncaught (in promise) undefined
 - Khi xử lý Reject() , nhưng đối tượng không xử lý handle lỗi ở phương thức .catch()
+
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
