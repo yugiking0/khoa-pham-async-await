@@ -2,6 +2,26 @@
 
 ---
 
+
+
+  - [Mục tiêu:](#1-mục-tiêu)
+  - [Promise](#2-promise)
+  - [Cấu trúc Promises](#3-cấu-trúc-promises)
+  - [Cách sử dụng Promise](#4-cách-sử-dụng-promise)
+  - [Các thử nghiệm xử lý Promise](#5-các-thử-nghiệm-xử-lý-promise)
+    - [1. Trạng thái **Pending**](#51-trạng-thái-pending)
+    - [2. Trạng thái **fulfilled**](#52-trạng-thái-fulfilled)
+    - [3. Trạng thái **Reject**](#53-trạng-thái-reject)
+      - [Báo lỗi Uncaught (in promise) undefined](#531-báo-lỗi-uncaught-in-promise-undefined)
+      - [Xử lý bắt lỗi](#532-xử-lý-bắt-lỗi)
+  - [Xử lý dữ liệu Promises trả về](#6-xử-lý-dữ-liệu-promises-trả-về)
+    - [Khi resolve()](#61-khi-resolve)
+    - [Khi reject()](#62-khi-reject)
+  - [Tóm tắt Promises](#7-tóm-tắt-promises)
+  - [Trả lời khi được hỏi về Promise](#8-trả-lời-phỏng-vấn-nếu-được-hỏi-về-promise)
+
+
+---
 ## 1. Mục tiêu:
 
 - Promise là gì?
@@ -511,8 +531,8 @@ newPromise
 - Dữ liệu data ở resolve(data) có thể dùng để truyền vào làm đối số ở hàm callback ở **`.then((data) => console.log(data))`**
 - Khi reject() thì nên truyền vào error mô tả lỗi để có thể sử dụng thành đối số được sử dụng ở hàm callback ở .catch hoặc .then dùng handle bắt lỗi ở trạng thái Rejected.
 
-  ## 8. Trả lời phỏng vấn nếu được hỏi về Promise
-  > **Hỏi: _Trình bày khái niệm về Promise_**
+## 8. Trả lời phỏng vấn nếu được hỏi về Promise
+> **Hỏi: _Trình bày khái niệm về Promise_**
 
 **Trả lời:**
 - Là một Object Constructor được bổ sung từ phiên bản ECMAScript-06 (2015) để khắc phục tình trạng Callback Hell gặp phải khi xử lý bất đồng bộ.

@@ -1,7 +1,7 @@
 # Xử lý bất đồng bộ trong Javascript
 
 ---
-
+Xem [Promise trong Javascript F8](./f8.md)
 <!-- ![Sync](./image/001.png 'Đồng bộ') -->
 
 ## 1. Các loại Functions : Xem mục [Các loại Function](./asset/01/functions.md)
