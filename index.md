@@ -39,6 +39,7 @@
 
 ## 8. Promise Basic
 
+- Xem [Promise](./asset/08/infor-promise.md)
 - Xem [Promise Basic](./asset/08/index.md)
 
 ## 9. Tái sử dụng Promise

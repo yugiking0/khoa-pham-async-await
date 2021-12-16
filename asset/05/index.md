@@ -70,7 +70,7 @@ Vậy lúc này cần xử lý **`Bất đồng bộ`** (`Asynchronous`)
 
 - Là xử lý cùng lúc nhiều công việc khác nhau không theo trình tự.
 - Không cần công việc trước hoàn tất, mà tại thời điểm này các công việc khác vẫn thực hiện.
-- Trong JavaScript có 1 số Method chức năng hỗ trợ chạy Bất đồng bộ này đơn giản như: _setTimeout_, _setInterval_,
+- Trong JavaScript có 1 số Method chức năng hỗ trợ chạy Bất đồng bộ này đơn giản như: _setTimeout_, _setInterval_, _fetch_, _XMLHttpRequest_
 - Ta xem ví dụ sau:
 
 ```js
@@ -89,6 +89,7 @@ console.log("Line 2");
 
 ### 1.3 Sự cần thiết xử lý Đồng bộ trong Bất đồng bộ
 
+- Đối với những tác vụ mà có sự ràng buộc lẫn nhau, tác vụ phía sau muốn chạy được phải chờ dữ liệu của tác vụ trước nó.
 - Quay trở lại ví dụ nấu nhiều món ăn: Món cá, món rau, món xào ... được thực hiện trong bếp của một Nhà Hàng.
 - Cùng 1 lúc các đầu bếp có thể xử lý nấu nhiều món ăn khác nhau, nhưng đối với từng món ăn phải đảm bảo theo trình tự chế biến; Không thể `mới chuẩn bị Nguyên liệu lại đem đi kho mà chưa sơ chế được`.
 - Ta xem cây qui trình sau:
@@ -137,6 +138,39 @@ Asynchronous(Dish01){ // Chế biến món 1
   }
  }
 }
+```
+
+> Ta xét ví dụ: In ra màn hình dãy số tăng dần sau mỗi giây(Không sử dụng chức năng setInterval)
+
+```js
+function logCount(ms) {
+  setTimeout(function () {
+    console.log(1);
+    setTimeout(function () {
+      console.log(2);
+      setTimeout(function () {
+        console.log(3);
+        setTimeout(function () {
+          console.log(4);
+          setTimeout(function () {
+            console.log(5);
+            setTimeout(function () {
+              console.log(6);
+              setTimeout(function () {
+                console.log(7);
+                setTimeout(function () {
+                  console.log(8);
+                }, ms);
+              }, ms);
+            }, ms);
+          }, ms);
+        }, ms);
+      }, ms);
+    }, ms);
+  }, ms);
+}
+
+logCount(1000);
 ```
 
 ### 1.4 Vấn đề của xử lý quá nhiều Đồng bộ trong Bất đồng bộ (Nỗi đau của Asynchronous)
