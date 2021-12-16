@@ -416,6 +416,7 @@ newPromise
 ```
 ![Ví dụ Reject](./images/012.png 'Reject')
 - Nhưng thông thường thì sẽ trả về mô tả lỗi để Dev có thể dễ dàng kiểm tra và khắc phục
+
 ```js
 var newPromise = new Promise((resolve, reject) => {
   console.log("Xử lý Promise!");
