@@ -184,6 +184,7 @@ newPromise
     console.log("Done!");
   });
 ```
+
 ![Reject](./images/005.png 'Reject')
 - Xuất hiện báo lỗi `Uncaught (in promise) undefined` nghĩa là chưa xử lý bắt lỗi Reject bị thiếu.
 - Hoặc nếu không xử lý là hàm callback cũng sẽ báo lỗi:
@@ -205,8 +206,10 @@ newPromise
 ```
 ![Reject](./images/009.png 'Reject')
 - Giống như chạy tất cả lệnh từ trên xuống dưới.
+
 #### 5.3.2 Xử lý bắt lỗi
 - Đối với xử lý Reject() khi xảy ra lỗi ta có thể bắt lỗi ở phương thức .catch như sau:
+
 ```js
 var newPromise = new Promise((resolve, reject) => {
   console.log("Xử lý Promise!");
@@ -229,8 +232,10 @@ newPromise
     console.log("Done!");
   });
 ```
+
 ![Reject](./images/006.png 'Reject')
 - Đối với xử lý bắt lỗi từ Reject(), ngoài cách bắt lỗi nhờ phương thức khối lệnh .catch() ta có thể bắt lỗi ở khối lệnh .then như sau:
+
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
@@ -262,6 +267,7 @@ newPromise
 ![Reject](./images/008.png 'Reject')
 
 - Có thể viết gọn lại bằng Arrow Function như sau:
+
 ```js
 var newPromise = new Promise((resolve, reject) => {
   console.log("Xử lý Promise!");
@@ -281,11 +287,11 @@ newPromise
   .catch(() => console.log("Failure!"))
   .finally(() => console.log("Done!"));
 ```
+
 ![Reject](./images/008.png 'Reject')
 
 - Ta thấy là bắt lỗi sẽ không vào .catch() mà được ưu tiên xử lý ở .then(result, error)
 - Nếu ở .catch() ta không truyền vào một hàm callback thì câu lệnh sẽ được nhảy thực thi ở .catch() sau đó mới chạy vào .then() bẫy lỗi, ta lưu ý các phương thức đều phải là hàm callback không nên gán là khối lệnh.
-
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
@@ -305,6 +311,7 @@ newPromise
   ).catch(console.log("Failure!"))
   .finally(() => console.log("Done!"));
 ```
+
 ![Reject](./images/007.png 'Reject')
 
 ## 6. Xử lý dữ liệu Promises trả về
@@ -312,6 +319,7 @@ newPromise
 - Sau khi Executor xử lý xong trả về đối tượng logic gọi đến hàm resolve(data) sẽ trả về một đối tượng Promise với dữ liệu data trong hàm resolve(data) sẽ được hứng handle xử lý tiếp ở phương thức .then()
 - Việc xử lý thành công resolve(data) thường gặp khi lấy dữ liệu từ backend hoặc từ API (Application Programming Interface) trong thực tế.
 - Ta xem xét ví dụ sau:
+
 ```js
 var newPromise = new Promise((resolve, reject) => {
   console.log("Xử lý Promise!");
@@ -337,8 +345,8 @@ newPromise
 ```
 ![Ví dụ Resolve](./images/010.png 'Resolve')
 - Hoặc một mảng JSON thông qua API 
-```js
 
+```js
 var newPromise = new Promise((resolve, reject) => {
   console.log("Xử lý Promise!");
   // Fake API data Promise
