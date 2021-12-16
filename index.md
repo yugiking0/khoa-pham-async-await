@@ -4,6 +4,8 @@
 Xem [Promise trong Javascript F8](./f8.md)
 <!-- ![Sync](./image/001.png 'Đồng bộ') -->
 
+Xem [github ](https://github.com/yugiking0/khoa-pham-async-await)
+
 ## 1. Các loại Functions : Xem mục [Các loại Function](./asset/01/functions.md)
 
 ![Các loại Functions](./asset/01/image/001.png "Các loại Functions")
