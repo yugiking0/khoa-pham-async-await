@@ -1,25 +1,33 @@
-var newPromise = new Promise((resolve, reject) => {
-  console.log("Xử lý Promise!");
-  // Fake API data Promise
-  reject(new Error("Lỗi request Timeout!"));
-});
-
-setTimeout(() => {
-  console.log(newPromise);
-}, 1000);
-
-newPromise
-  .then(
-    function (result) {
-      console.log("Successfully: ", result);
-    },
-    function (error) {
-      console.error(error + "");
-    }
-  )
-  // .catch(function (error) {
-  //   console.error(error + '');
-  // })
-  .finally(function () {
-    console.log("Done!");
+function sleep(ms, data) {
+  return new Promise(function (resolve) {
+    setTimeout(() => resolve(++data), ms);
   });
+}
+
+sleep(1000, 0)
+  .then(function (data) {
+    console.log(data);
+    return sleep(1000, data);
+  })
+  .then(function (data) {
+    console.log(data);
+    return sleep(1000, data);
+  })
+  .then(function (data) {
+    console.log(data);
+    return sleep(1000, data);
+  })
+  .then(function (data) {
+    console.log(data);
+    return sleep(1000, data);
+  })
+  .then(function (data) {
+    console.log(data);
+    return sleep(1000, data);
+  })
+  .then(function (data) {
+    console.log(data);
+    return sleep(1000, data);
+  })
+  .catch((error) => console.error('Error: ', error))
+  .finally(() => console.log('Done!'));
