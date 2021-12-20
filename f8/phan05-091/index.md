@@ -17,16 +17,16 @@
 
 ---
 
-- Tính chất chuỗi của Promise (Promise Chain)
+- Tính chất chuỗi của `Promise` (**`Promise Chain`**)
 
 ## 1. Nhắc lại Callback Hell
 
-- Việc các câu lệnh bị lồng nhau thành nhiều tầng và lớp, rất khó khi chỉnh sửa hay thêm 1 câu lệnh nào đó bổ sung sẽ dễ sai xót các dấu ngoặc nhọn hoặc dấu ngoặc tròn dẫn đến câu lệnh bị sai, nếu tăng số lượng các file cần đọc lên nhiều 10, 100, 1000,... thì việc điều chỉnh những câu lệnh này sẽ rất khó khăn và dễ sai xót dẫn đến lỗi.
-- Với Promise sẽ khắc phục được lỗi `Callback Hell`, bằng cách xử lý gọi lệnh từng dòng chạy song song, dễ nhìn và dễ chỉnh sửa.
+- Việc các câu lệnh bị lồng nhau thành nhiều tầng và nhiều lớp, rất khó khi chỉnh sửa hay thêm 1 câu lệnh nào đó bổ sung sẽ dễ sai xót các dấu ngoặc nhọn hoặc dấu ngoặc tròn dẫn đến câu lệnh bị sai, nếu tăng số lượng các file cần đọc lên nhiều 10, 100, 1000,... thì việc điều chỉnh những câu lệnh này sẽ rất khó khăn và dễ sai xót dẫn đến lỗi.
+- Với **Promise** sẽ khắc phục được lỗi `Callback Hell`, bằng cách xử lý gọi lệnh từng dòng chạy song song, dễ nhìn và dễ chỉnh sửa.
 
 ## 2. Tính chất chuỗi của Promise
 
-- Ta xem lại cách tạo một đối tượng Promise
+- Ta xem lại cách tạo một đối tượng **Promise**:
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
@@ -40,7 +40,7 @@ newPromise
 
 ### 2.1 Tạo các khối .then liên tiếp
 
-- Tạo handle của Promise với nhiều khối lệnh .then liên tiếp
+- Tạo `handle` của **Promise** với nhiều khối lệnh `.then` liên tiếp
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
@@ -57,11 +57,11 @@ newPromise
 
 ![Promise Chain](./images/001.png 'Promise Chain')
 
-- Ta thấy sau khi chạy xong .then thứ nhất, sẽ chạy tiếp .then thứ 2 rồi mới chạy tiếp .then thứ ba.
+- Ta thấy sau khi chạy xong `.then` thứ nhất, sẽ chạy tiếp `.then` thứ 2 rồi mới chạy tiếp `.then` thứ ba.
 
 ### 2.2 Tạo các khối .then liên tiếp có xử lý setTimeOut
 
-- Tạo handle của Promise với nhiều khối lệnh .then liên tiếp, trong đó có xử lý setTimeOut để kiểm tra các .then là xử lý bất đồng bộ hay đồng bộ.
+- Tạo `handle` của **Promise** với nhiều khối lệnh `.then` liên tiếp, trong đó có xử lý `setTimeOut` để kiểm tra các `.then` là xử lý bất đồng bộ hay đồng bộ.
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
@@ -82,11 +82,11 @@ newPromise
 
 ![Promise Chain](./images/002.png 'Promise Chain')
 
-- Như vậy khi .then thì xử lý ở đây vẫn là bất đồng bộ không theo thứ tự từng khối line.
+- Như vậy khi `.then` thì xử lý ở đây vẫn là bất đồng bộ không theo thứ tự từng khối line.
 
 ### 2.3 Tạo các khối .then liên tiếp, có xử lý return giá trị
 
-- Một tính chất của Promise đó là có tính thừa hưởng giá trị của từng khối lệnh .then trong chuỗi (Promise Chain)
+- Một tính chất của Promise đó là có tính thừa hưởng giá trị của từng khối lệnh `.then` trong chuỗi (**Promise Chain**)
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
@@ -111,7 +111,7 @@ newPromise
 
 ![Promise Chain](./images/000.png 'Promise Chain')
 
-- Nếu khối lệnh .then phía trước nếu không return một giá trị thì tham số data của khối lệnh .then trong callback kế tiếp sẽ là giá trị `Undefine`
+- Nếu khối lệnh `.then` phía trước nếu không return một giá trị thì tham số data của khối lệnh `.then` trong `callback` kế tiếp sẽ là giá trị `Undefined`
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
@@ -140,11 +140,11 @@ newPromise
 
 ![Promise Chain](./images/003.png 'Promise Chain')
 
-- Giá trị được return của khối lệnh .then callback phía trước sẽ trở thành tham số của khối lệnh .then trong callback phía sau.
+- Giá trị được `return` của khối lệnh .`then` `callback` phía trước sẽ trở thành tham số của khối lệnh `.then` trong `callback` phía sau.
 
 ### 2.4 Tạo các khối .then liên tiếp return giá trị, có setTimeOut
 
-- Tạo các khối .then liên tiếp có return giá trị, và có setTimeOut để kiểm tra kế thừa giá trị và bất đồng bộ hay đồng bộ.
+- Tạo các khối `.then` liên tiếp có `return` giá trị, và có `setTimeOut` để kiểm tra kế thừa giá trị và bất đồng bộ hay đồng bộ.
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
@@ -181,7 +181,7 @@ newPromise
 
 ![Promise Chain](./images/004.png 'Promise Chain')
 
-- Xử lý bất đồng bộ nếu như không return một Promise thì sẽ chạy xử lý tiếp ở .then kế tiếp mà không chờ xử lý.
+- Xử lý bất đồng bộ nếu như không `return` một `Promise` thì sẽ chạy xử lý tiếp ở `.then` kế tiếp mà không chờ xử lý.
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
@@ -217,7 +217,7 @@ newPromise
 
 ![Promise Chain](./images/005.png 'Promise Chain')
 
-- Ta thấy ở các .then này vẫn chạy theo tính chất đồng bộ và nếu không chạy xử lý .then phía trước không return đối tượng Promise.
+- Ta thấy ở các `.then` này vẫn chạy theo tính chất đồng bộ và nếu không chạy xử lý `.then` phía trước không `return` đối tượng **Promise**.
 
 ### 2.5 Tạo khối liên tiếp và có xử lý setTimeOut -> Promise
 
@@ -252,9 +252,9 @@ newPromise
 
 ![Promise Chain](./images/007.png 'Promise Chain')
 
-- Ta thấy các khối lệnh .then do chạy setTimeout trước nên bị lướt qua chạy bất đồng bộ, sau đó chạy tiếp các .then kế tiếp mà không chờ xử lý Promise trong khối lệnh setTimeout
+- Ta thấy các khối lệnh `.then` do chạy `setTimeout` trước nên bị lướt qua chạy bất đồng bộ, sau đó chạy tiếp các `.then` kế tiếp mà không chờ xử lý **Promise** trong khối lệnh `setTimeout`
 
-- Như vậy nếu khối lệnh .then không xử lý return trả về một đối tượng Promise thì vẫn chạy theo kiểu đồng bộ chạy tiếp câu lệnh kế tiếp, nếu có xử lý setTimeOut thì sẽ chạy ngầm và chạy tiếp xử lý ở .then kế tiếp mà không dừng lại chờ.
+- Như vậy nếu khối lệnh `.then` không xử lý `return` trả về một đối tượng **Promise** thì vẫn chạy theo kiểu đồng bộ chạy tiếp câu lệnh kế tiếp, nếu có xử lý `setTimeOut` thì sẽ chạy ngầm và chạy tiếp xử lý ở .then kế tiếp mà không dừng lại chờ.
 
 ### 2.6 Tạo khối liên tiếp và có xử lý Promise -> setTimeout
 
@@ -289,7 +289,7 @@ newPromise
 
 ![Promise Chain](./images/006.png 'Promise Chain')
 
-- Với xử lý .then xử lý return trả về một Promise thì các khối lệnh .then chạy theo xử lý Đồng bộ theo thứ tự và chờ xử lý xong câu lệnh .then phía trước mới chạy tiếp các khối lệnh .then kế tiếp.
+- Với xử lý `.then` xử lý `return` trả về một **Promise** thì các khối lệnh `.then` chạy theo xử lý Đồng bộ theo thứ tự và chờ xử lý xong câu lệnh `.then` phía trước mới chạy tiếp các khối lệnh `.then` kế tiếp.
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
@@ -319,7 +319,7 @@ newPromise
 
 ### 2.7 Tạo khối liên tiếp và có xử lý Promise có Reject
 
-- Ta xen kẻ nhiều đối tượng Promise xử lý Reject() để kiểm tra kết quả trả về.
+- Ta xen kẻ nhiều đối tượng **Promise** xử lý `Reject()` để kiểm tra kết quả trả về.
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
@@ -367,7 +367,7 @@ newPromise
 
 ![Promise Chain](./images/009.png 'Promise Chain')
 
-- Như vậy với mỗi Reject() của .then thì sẽ tìm khối lệnh .catch gần nhất để xử lý, sau đó chạy tiếp khối lệnh .then phía sau của .catch
+- Như vậy với mỗi `Reject()` của `.then` thì sẽ tìm khối lệnh `.catch` gần nhất để xử lý, sau đó chạy tiếp khối lệnh `.then` phía sau của `.catch`
 
 ```js
 var newPromise = new Promise((resolve, reject) => {
@@ -414,8 +414,8 @@ newPromise
 
 ![Promise Chain](./images/010.png 'Promise Chain')
 
-- Như vậy khi gặp đối tượng Promise có Reject() thì sẽ nhảy đến xử lý ở khối lệnh .catch gần nhất, nếu sau khối lệnh .catch không có khối lệnh .then thì xử lý handle đối tượng newPromise sẽ được dừng lại.
-- Với các khối lệnh .then khi trả về đối tượng Promise thì có thể dùng chung một khối lệnh .catch và từ khối lệnh .then được return sẽ không chạy xử lý tiếp các khối lệnh .then còn lại, như vậy chuỗi .then hay tính chất chuỗi của Promise Chain sẽ được dừng lại khi gặp xử lý .then return trả về một đối tượng Promise bị Rejected thì sẽ dừng lại không xử lý tiếp các khối lệnh .then tiếp theo phía sau.
+- Như vậy khi gặp đối tượng **Promise** có `Reject()` thì sẽ nhảy đến xử lý ở khối lệnh `.catch` gần nhất, nếu sau khối lệnh `.catch` không có khối lệnh `.then` thì xử lý `handle` đối tượng `newPromise` sẽ được dừng lại.
+- Với các khối lệnh `.then` khi trả về đối tượng **Promise** thì có thể dùng chung một khối lệnh `.catch` và từ khối lệnh `.then` được `return` sẽ không chạy xử lý tiếp các khối lệnh `.then` còn lại, như vậy chuỗi `.then` hay tính chất chuỗi của **Promise Chain** sẽ được dừng lại khi gặp xử lý `.then` `return` trả về một đối tượng **Promise** bị `Rejected` thì sẽ dừng lại không xử lý tiếp các khối lệnh `.then` tiếp theo phía sau.
 
 ## 3. Áp dụng in số thứ tự sau mỗi giây
 
@@ -501,7 +501,7 @@ sleep(1000, 0)
 
 ### 3.2 Xử lý
 
-- Xử lý thành Arrow Function sẽ viết gọn lại như sau:
+- Xử lý thành `Arrow Function` sẽ viết gọn lại như sau:
 
 ```js
 function printLog(ms, count) {
