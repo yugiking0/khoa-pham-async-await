@@ -1,31 +1,91 @@
-function tOut(t) {
-  return new Promise((resolve, reject) => {
+/**
+ * Data Users, Comments
+ */
+
+var users = [
+  {
+    id: 1,
+    name: 'Kien Pham',
+  },
+  {
+    id: 2,
+    name: 'Son Dang',
+  },
+  {
+    id: 3,
+    name: 'Hung Dam',
+  },
+];
+
+var comments = [
+  {
+    id: 1,
+    user_id: 1,
+    content: 'anh Son chua ra video :(',
+  },
+  {
+    id: 2,
+    user_id: 2,
+    content: 'Vừa ra em ơi!',
+  },
+  {
+    id: 3,
+    user_id: 1,
+    content: 'Cam on anh ^^',
+  },
+];
+
+// Tạo load dữ liệu Comments Bất đồng bộ là một Promise
+function getComments() {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(`Completed in ${t} ms`);
-    }, t);
+      resolve(comments);
+    }, 1000);
   });
 }
-var time_start = new Date();
 
-// Resolving a normal promise
-tOut(1000)
-  .then(function (res) {
-    console.log('Task 1: ', res);
-    return tOut(4000);
-  })
-  .then(function (res) {
-    console.log('Task 2: ', res);
-    return tOut(6000);
-  })
-  .then(function (res) {
-    console.log('Task 3: ', res);
-    console.log('Total time normal promise: ', new Date() - time_start);
+// Tạo load dữ liệu Users Bất đồng bộ là một Promise
+// lấy theo list ID từ user đã Comments
+
+function getUsersByID(userIds) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      //Lọc những User nằm trong Array userIDs
+      var results = users.filter(function (user) {
+        // Kiểm tra đối chiếu userIds các phần tử là user.id
+        return userIds.includes(user.id);
+      });
+      return resolve(results);
+    }, 1000);
   });
+}
 
-// Promise.all
-//prettier-ignore
-Promise.all([tOut(1000), tOut(4000), tOut(6000)])
-  .then(function (res) {
-    console.log('Total time Promise.all: ', new Date() - time_start);
-  }
-);
+// Xử lý lấy Data cần lấy từ back-end theo Promise Chain
+getComments()
+  .then(function (comments) {
+    // Lấy userIds từ comments
+    var userIds = comments.map(function (comment) {
+      return comment.user_id;
+    });
+    return getUsersByID(userIds).then(function (users) {
+      return {
+        users: users,
+        comments: comments,
+      };
+    });
+  })
+  .then(function (data) {
+    var commentsBox = document.getElementById('comments-box');
+    var html = '';
+
+    // Lặp qua các Comments để lấy nội dung
+    data.comments.forEach(function (comment) {
+      // Với mỗi comment có user_id sẽ kết nối qua user để lấy thông tin user
+      var user = data.users.find(function (user) {
+        return user.id == comment.user_id;
+      });
+      html += `<li> ${user.name} : ${comment.content}</li> \n`;
+    });
+
+    commentsBox.innerHTML = html;
+  });

@@ -324,4 +324,51 @@ Promise.all([pr1, pr2, pr3])
 
 ![Promise.all](./images/007.png 'Promise.all')
 
----
+- Ta so sánh xử lý theo từng Promise và xử lý chung Promise.all
+
+```js
+function load1() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve([1, 2]);
+    }, 2000);
+  });
+}
+
+function load2() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve([3, 4, 5]);
+    }, 3000);
+  });
+}
+
+var time_start = new Date();
+var arr = [];
+
+// Resolving a normal promise
+load1()
+  .then(function (res1) {
+    console.log(`Task 1: Completed in ${new Date() - time_start} ms`);
+    arr = arr.concat(res1);
+    return load2();
+  })
+  .then(function (res2) {
+    console.log(`Task 2: Completed in ${new Date() - time_start} ms`);
+    arr = arr.concat(res2);
+    console.log(
+      `Completed Single Promise in ${new Date() - time_start} ms : `,
+      arr
+    );
+  });
+
+// Resolving Promise.all
+Promise.all([load1(), load2()]).then(function (res) {
+  console.log(
+    `Completed Promise.all in ${new Date() - time_start} ms : `,
+    res[0].concat(res[1])
+  );
+});
+```
+
+![Promise.all](./images/009.png 'Promise.all')

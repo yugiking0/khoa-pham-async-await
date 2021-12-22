@@ -1,44 +1,31 @@
-function waitSecond() {
-  return new Promise((res, rej) => {
+function tOut(t) {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log('Log');
-      res();
-    }, 1000);
+      resolve(`Completed in ${t} ms`);
+    }, t);
   });
 }
+var time_start = new Date();
 
-function runSeries() {
-  console.time('series');
-  waitSecond().then(() => {
-    console.log('1');
-    waitSecond().then(() => {
-      console.log('2');
-      waitSecond().then(() => {
-        console.log('3');
-        waitSecond().then(() => {
-          console.log('4');
-          waitSecond().then(() => {
-            console.log('5');
-            console.timeEnd('series');
-          });
-        });
-      });
-    });
+// Resolving a normal promise
+tOut(1000)
+  .then(function (res) {
+    console.log('Task 1: ', res);
+    return tOut(4000);
+  })
+  .then(function (res) {
+    console.log('Task 2: ', res);
+    return tOut(6000);
+  })
+  .then(function (res) {
+    console.log('Task 3: ', res);
+    console.log('Total time normal promise: ', new Date() - time_start);
   });
-}
 
-function runParallel() {
-  console.time('parallel');
-  Promise.all([
-    waitSecond(),
-    waitSecond(),
-    waitSecond(),
-    waitSecond(),
-    waitSecond(),
-  ]).then(() => {
-    console.timeEnd('parallel');
-  });
-}
-
-runSeries();
-runParallel();
+// Promise.all
+//prettier-ignore
+Promise.all([tOut(1000), tOut(4000), tOut(6000)])
+  .then(function (res) {
+    console.log('Total time Promise.all: ', new Date() - time_start);
+  }
+);
